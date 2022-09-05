@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/buoi2/QueueSender.java=UTF-8
+encoding//src/buoi1/QueueReceiver.java=UTF-8
+encoding//src/buoi1/QueueSender.java=UTF-8
+encoding//src/buoi2/TopicPublisher.java=UTF-8
+encoding//src/buoi2/TopicSubcriber.java=UTF-8

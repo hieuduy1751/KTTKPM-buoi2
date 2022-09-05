@@ -1,4 +1,4 @@
-package buoi2;
+package buoi1;
 import java.util.Date;
 import java.util.Properties;
 import javax.jms.Connection;
@@ -10,7 +10,9 @@ import javax.jms.Session;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import org.apache.log4j.BasicConfigurator;
-import buoi2.Person; import buoi2.XMLConvert;
+
+import buoi1.Person;
+import buoi1.XMLConvert;
 
 public class QueueSender {
 	public static void main(String[] args) throws Exception{
@@ -20,7 +22,7 @@ public class QueueSender {
 		Properties settings=new Properties();
 		settings.setProperty(Context.INITIAL_CONTEXT_FACTORY,
 		"org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-		settings.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
+		settings.setProperty(Context.PROVIDER_URL, "tcp://localhost:6616");
 		//create context
 		Context ctx=new InitialContext(settings);
 		//lookup JMS connection factory
@@ -43,7 +45,7 @@ public class QueueSender {
 		//create text message
 		Message msg=session.createTextMessage("hello mesage from ActiveMQ");
 		producer.send(msg);
-		Person p=new Person(1001, "Thân Thị Đẹt", new Date());
+		Person p=new Person(1001, "Thân Thị �?ẹt", new Date());
 		String xml=new XMLConvert<Person>(p).object2XML(p);
 		msg=session.createTextMessage(xml);
 		producer.send(msg);
@@ -52,3 +54,5 @@ public class QueueSender {
 		System.out.println("Finished...");
 	}
 }
+
+

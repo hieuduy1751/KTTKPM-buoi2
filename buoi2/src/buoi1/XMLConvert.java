@@ -1,4 +1,4 @@
-package buoi2;
+package buoi1;
 import java.io.StringReader;
 import java.io.StringWriter;
 import javax.xml.bind.JAXBContext;

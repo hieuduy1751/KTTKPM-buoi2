@@ -1,4 +1,4 @@
-package buoi2;
+package buoi1;
 import java.io.Serializable;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlRootElement;
